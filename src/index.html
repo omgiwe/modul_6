@@ -1,16 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="menu-left">
+            <button class="btn-style menu-left__btn-burger" type="button">
+              <img class="menu-left__btn-img" src="img/menu.svg" alt="Меню" />
+            </button>
+            <a class="menu-left__logo" href="#">
+              <img
+                class="menu-left__logo-img"
+                src="img/logo.svg"
+                alt="Логотип"
+              />
+            </a>
+          </div>
+          <div class="menu-rigth">
+            <div class="menu-rigth__contacts">
+              <button class="btn-style menu-rigth__contacts-btn" type="button">
+                <img
+                  class="menu-rigth__btn-img"
+                  src="img/call.svg"
+                  alt="Обратный звонок"
+                />
+              </button>
+              <button class="btn-style menu-rigth__contacts-btn" type="button">
+                <img
+                  class="menu-rigth__btn-img"
+                  src="img/message.svg"
+                  alt="Отправить сообщение"
+                />
+              </button>
+              <button class="btn-style menu-rigth__contacts-btn" type="button">
+                <img
+                  class="menu-rigth__btn-img"
+                  src="img/profile.svg"
+                  alt="Ваш профиль"
+                />
+              </button>
+            </div>
+            <div class="menu-rigth__application">
+              <button class="btn-style menu-rigth__btn" type="button">
+                <img
+                  class="menu-rigth__btn-img"
+                  src="img/application.svg"
+                  alt="Оставить заявку"
+                />
+              </button>
+              <button class="btn-style menu-rigth__btn" type="button">
+                <img
+                  class="menu-rigth__btn-img"
+                  src="img/status.svg"
+                  alt="Статус ремонта"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="services">
+        <div class="container">
+          <div class="services__head-wrapper">
+            <h1 class="services__title">Услуги и сервисы</h1>
+            <div class="services__application">
+              <button class="services__btn" type="button">
+                Оставить заявку
+                <img
+                  class="services__img"
+                  src="img/application.svg"
+                  alt="Оставить заявку"
+                />
+              </button>
+              <button class="services__btn" type="button">
+                Статус ремонта
+                <img
+                  class="services__img"
+                  src="img/status.svg"
+                  alt="Статус ремонта"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="services__menu-wrapper">
+            <nav class="services__menu">
+              <ul class="services__menu-items">
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#"
+                    >Ремонтируемые устройства</a
+                  >
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#"
+                    >Дополнительные услуги</a
+                  >
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#">Цены на услуги</a>
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#"
+                    >Адреса сервисных центров</a
+                  >
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#">Специальные цены</a>
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <div class="about__info">
+            <div class="about__text">
+              <div class="about__text-wrapper">
+                <p>
+                  Мы являемся авторизованным сервисным центром по ремонту
+                  техники Dell. Только у нас вы можете отремонтировать свой
+                  ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p>
+                  Мы успешно работаем с 1992 года и заслужили репутацию
+                  надежного партнера, что подтверждает большое количество
+                  постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+                  рекомендациям и, в свою очередь, советуют нас родным и
+                  близким.
+                </p>
+              </div>
+              <button class="about__btn-more">
+                <img
+                  class="about__btn-img"
+                  src="img/more.svg"
+                  alt="more"
+                />Читать далее
+              </button>
+            </div>
+            <img class="about__img" src="img/about.jpg" alt="about" />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
