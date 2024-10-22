@@ -1,24 +1,41 @@
 .technics {
-  padding-bottom: 38px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .technics {
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .technics {
+    padding-bottom: 50px;
+  }
 }
 
 .technics-item {
   width: 240px;
   &__inner {
+    height: 160px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 15px;
     background-color: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 6px;
   }
   &__title {
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
     margin: 0;
   }
   &__btn {
+    align-self: flex-end;
     border: none;
     background-color: transparent;
     width: 40px;
@@ -55,15 +72,15 @@
       overflow: hidden;
       flex-wrap: wrap;
       gap: 16px 24px;
-      height: 164px;
+      height: 160px;
     }
     &__wrapper--open {
-      // transition: height 0.6s ease;
-      // height: 344px;
+      transition: height 0.6s ease;
+      height: 512px;
     }
     &__wrapper--close {
-      // transition: height 0.6s ease;
-      // height: 164px;
+      transition: height 0.6s ease;
+      height: 160px;
     }
   }
 }
@@ -74,8 +91,8 @@
       gap: 16px 32px;
     }
     &__wrapper--open {
-      // transition: height 0.6s ease;
-      // height: 254px;
+      transition: height 0.6s ease;
+      height: 336px;
     }
   }
 }

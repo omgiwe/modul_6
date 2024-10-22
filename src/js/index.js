@@ -12,7 +12,7 @@ buttonText.addEventListener('click', () => {
 
   iconMoreText.classList.toggle('about__btn-img--rotate')
 
-  if (!content.classList.contains('about__text-wrapper--open')) {
+  if (!contentText.classList.contains('about__text-wrapper--open')) {
     textButtonAbout.textContent = 'Читать далее'
   } else {
     textButtonAbout.textContent = 'Скрыть'
@@ -39,6 +39,29 @@ button.addEventListener('click', () => {
     textButton.textContent = 'Показать все'
   } else {
     textButton.textContent = 'Скрыть'
+  }
+})
+
+const buttonTechnics = document.querySelector('.technics-btn')
+const contentTechnics = document.querySelector('.slider-technics__wrapper')
+const iconMoreTechnics = document.querySelector('.technics-btn__img')
+const textButtonTechnics = document.querySelector('.technics-btn__text')
+
+buttonTechnics.addEventListener('click', () => {
+  if (!contentTechnics.classList.contains('slider-technics__wrapper--open')) {
+    contentTechnics.classList.remove('slider-technics__wrapper--close')
+    contentTechnics.classList.add('slider-technics__wrapper--open')
+  } else {
+    contentTechnics.classList.add('slider-technics__wrapper--close')
+    contentTechnics.classList.remove('slider-technics__wrapper--open')
+  }
+
+  iconMoreTechnics.classList.toggle('technics-btn__img--rotate')
+
+  if (!contentTechnics.classList.contains('slider-technics__wrapper--open')) {
+    textButtonTechnics.textContent = 'Показать все'
+  } else {
+    textButtonTechnics.textContent = 'Скрыть'
   }
 })
 
