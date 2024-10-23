@@ -136,3 +136,33 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
 })
+
+const BURGER_OPENED_CLASSNAME = 'aside--open'
+const BODY_FIXED_CLASSNAME = 'body_fixed'
+
+const bodyNode = document.querySelector('body')
+const burgerNode = document.querySelector('.aside')
+const burgerBtnOpen = document.querySelector('.menu-left__btn-burger')
+const burgerBtnClose = document.querySelector('.top-content__btn')
+const burgerContent = document.querySelector('.aside__wrapper')
+
+burgerBtnOpen.addEventListener('click', openBurger)
+burgerBtnClose.addEventListener('click', closeBurger)
+
+burgerNode.addEventListener('click', (event) => {
+  const isClickOutsideContent = !event.composedPath().includes(burgerContent)
+
+  if (isClickOutsideContent) {
+    closeBurger()
+  }
+})
+
+function openBurger() {
+  burgerNode.classList.add(BURGER_OPENED_CLASSNAME)
+  bodyNode.classList.add(BODY_FIXED_CLASSNAME)
+}
+
+function closeBurger() {
+  burgerNode.classList.remove(BURGER_OPENED_CLASSNAME)
+  bodyNode.classList.remove(BODY_FIXED_CLASSNAME)
+}

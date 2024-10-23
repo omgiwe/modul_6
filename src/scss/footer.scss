@@ -1,0 +1,32 @@
+.footer-inner {
+  padding: 16px 0;
+  color: $text-second;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  &__content {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    padding: 25px 0;
+    flex-direction: row;
+    gap: auto;
+    justify-content: space-between;
+    &__content {
+      width: 33%;
+    }
+    &__content:first-child {
+      text-align: left;
+    }
+    &__content:last-child {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.body_fixed {
+  overflow: hidden;
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1b1c21;
+  background-color: rgba($white-background, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  // transition: all 1s ease;
+  z-index: 100;
+  &__wrapper {
+    // position: fixed;
+    height: 100%;
+    background-color: $white-background;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+  }
+  &__menu {
+    margin-bottom: 32px;
+  }
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__menu-link {
+    color: #1b1c21;
+    position: relative;
+  }
+  &__menu-link:hover {
+    opacity: 0.5;
+  }
+  &__menu-link:hover::before {
+    content: '';
+    background: #41f6d7;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    left: -24px;
+    top: -4px;
+  }
+}
+
+.aside--open {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s ease;
+}
+
+@media (min-width: 768px) {
+  .aside {
+    &__wrapper {
+      max-width: 320px;
+      box-shadow: 20px 0px 23px 0px rgba(34, 60, 80, 0.21);
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .inner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .aside {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+    min-width: 320px;
+    &__wrapper {
+      position: fixed;
+      box-shadow: none;
+      width: 320px;
+    }
+
+    .inner__main {
+    }
+  }
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  margin-bottom: 20px;
+  &__btn {
+    align-self: center;
+  }
+  &__btn:first-child {
+    margin-right: 16px;
+  }
+  &__logo {
+    display: flex;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1366px) {
+  .top-content {
+    &__btn:first-child {
+      display: none;
+    }
+  }
+}
+
+.bot-content {
+  margin-top: auto;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  &__callback-icon {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  &__mail {
+    color: #1b1c21;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  &__phone {
+    color: #1b1c21;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  &__lang {
+    display: flex;
+    gap: 7px;
+  }
+  &__lang-link {
+    color: #1b1c21;
+  }
+  &__lang-link--active {
+    color: #7e7e82;
+  }
+}
