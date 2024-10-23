@@ -116,7 +116,7 @@
 ////Нижние рамки
 @media (min-width: 768px) {
   .swiper-slide:not(:last-child) .price-item .price-item__inner {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid $gray-element;
   }
 }
 ////////
@@ -131,10 +131,14 @@
   }
 }
 ///
+.slider-price {
+  margin-bottom: 16px;
+}
 
 @media (min-width: 768px) {
   .slider-price {
     padding-top: 47px;
+    margin-bottom: 24px;
     mask-image: none;
     &__wrapper {
       display: flex;
@@ -142,5 +146,33 @@
       background-color: $white-background;
       border-radius: 6px;
     }
+  }
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__text {
+    margin: 0;
+    line-height: 20px;
+    max-width: 470px;
+    width: 80%;
+  }
+  &__btn {
+    width: 200px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    text-align: start;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__btn-img {
+    vertical-align: middle;
+    margin-left: 4px;
   }
 }
