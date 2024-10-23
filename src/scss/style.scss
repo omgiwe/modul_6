@@ -1,4 +1,4 @@
-@import '/node_modules/swiper/swiper-bundle.css';
+// @import '/node_modules/swiper/swiper-bundle.css';
 @import 'fonts';
 @import '~normalize.css';
 @import 'vars';
@@ -7,6 +7,7 @@
 @import 'about.scss';
 @import 'brands.scss';
 @import 'technics.scss';
+@import 'price.scss';
 
 html {
   box-sizing: border-box;

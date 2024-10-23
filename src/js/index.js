@@ -1,5 +1,8 @@
 // import Swiper bundle with all modules installed
-import Swiper from '../../node_modules/swiper/swiper-bundle'
+import Swiper from 'swiper'
+import { Pagination } from 'swiper/modules'
+import 'swiper/swiper.scss'
+import 'swiper/modules/pagination.scss'
 import '../scss/style.scss'
 
 const buttonText = document.querySelector('.about__btn-more')
@@ -98,6 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   resizableSwiper('(max-width: 767px)', '.slider-1', {
+    modules: [Pagination],
     loop: true,
     spaceBetween: 16,
     direction: 'horizontal',
@@ -109,6 +113,19 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
   resizableSwiper('(max-width: 767px)', '.slider-technics', {
+    modules: [Pagination],
+    loop: true,
+    spaceBetween: 16,
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 767px)', '.slider-price', {
+    modules: [Pagination],
     loop: true,
     spaceBetween: 16,
     direction: 'horizontal',

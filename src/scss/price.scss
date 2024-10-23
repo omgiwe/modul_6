@@ -1,0 +1,146 @@
+.price {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .price {
+    padding-bottom: 47px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .price {
+    padding-bottom: 50px;
+  }
+}
+
+.price-item {
+  width: 260px;
+  &__inner {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: $white-background;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__content-title {
+    margin: 0;
+    color: $text-second;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &__content-text {
+    margin: 0;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    border: none;
+    background-color: $color-btn;
+    width: 119px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+  }
+  &__btn:hover {
+    opacity: 0.5;
+  }
+  &__btn-text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 0;
+    color: $white-background;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .price-item {
+    width: auto;
+    &__inner {
+      height: auto;
+      flex-direction: row;
+      border-radius: 0;
+      justify-content: space-between;
+      background-color: none;
+      align-items: center;
+      padding: 16px 0;
+      margin: 0 16px;
+    }
+    &__inner:last-of-type {
+      border-bottom: none;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__content:first-child {
+      min-width: 370px;
+    }
+    &__content-title {
+      position: absolute;
+      top: -25px;
+    }
+    &__content-text {
+      position: relative;
+    }
+    &__btn {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      min-width: 119px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .price-item {
+    &__content:first-child {
+      min-width: 470px;
+    }
+  }
+}
+
+////Нижние рамки
+@media (min-width: 768px) {
+  .swiper-slide:not(:last-child) .price-item .price-item__inner {
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+////////
+/// Убираем текст кропе первого и поднимаем его
+@media (min-width: 768px) {
+  .swiper-slide:not(:first-child)
+    .price-item
+    .price-item__inner
+    .price-item__content
+    .price-item__content-title {
+    display: none;
+  }
+}
+///
+
+@media (min-width: 768px) {
+  .slider-price {
+    padding-top: 47px;
+    mask-image: none;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: $white-background;
+      border-radius: 6px;
+    }
+  }
+}
