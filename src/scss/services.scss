@@ -73,7 +73,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: $screen-xl) {
   .services {
     padding: 42px 0 8px;
     &__head-wrapper {

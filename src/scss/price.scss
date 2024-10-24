@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: $screen-xl) {
   .price {
     padding-bottom: 50px;
   }
@@ -105,7 +105,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: $screen-xl) {
   .price-item {
     &__content:first-child {
       min-width: 470px;
