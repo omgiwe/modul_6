@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .services {
     padding: 24px 0 32px;
     &__title {
@@ -111,9 +111,13 @@
       display: flex;
       align-items: center;
     }
+    &__btn:hover {
+      opacity: 0.5;
+    }
     &__menu-wrapper {
       overflow: hidden;
       height: auto;
+      mask-image: none;
     }
     &__menu {
       overflow-x: visible;

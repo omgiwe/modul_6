@@ -7,7 +7,6 @@
   </head>
   <body>
     <div class="inner">
-      <!-- <div class="inner__aside-burger"> -->
       <aside class="aside">
         <div class="aside__wrapper">
           <div class="top-content">
@@ -65,12 +64,15 @@
             <div class="bot-content__callback-icon">
               <button class="btn-style bot-content__btn" type="button">
                 <img
-                  class="bot-content__btn-img"
+                  class="bot-content__btn-img js-callback-btn"
                   src="img/call.svg"
                   alt="Обратный звонок"
                 />
               </button>
-              <button class="btn-style bot-content__btn" type="button">
+              <button
+                class="btn-style bot-content__btn js-feedback-btn"
+                type="button"
+              >
                 <img
                   class="bot-content__btn-img"
                   src="img/message.svg"
@@ -103,7 +105,101 @@
           </div>
         </div>
       </aside>
-      <!-- </div> -->
+      <aside class="feedback">
+        <div class="feedback__content">
+          <button class="btn-style feedback__btn"
+            ><img class="feedback__btn-img" src="/src/img/burger.svg" alt=""
+          /></button>
+          <h2 class="feedback__title">Обратная связь</h2>
+          <form action="" method="post" class="feedback-form">
+            <label class="feedback-form__label">
+              <input
+                class="feedback-form__input"
+                type="text"
+                name="name"
+                placeholder="Имя"
+              />
+            </label>
+            <label class="feedback-form__label">
+              <input
+                class="feedback-form__input"
+                type="tel"
+                name="phone"
+                placeholder="Телефон"
+              />
+            </label>
+            <label class="feedback-form__label">
+              <input
+                class="feedback-form__input"
+                type="email"
+                name="email"
+                placeholder="Электронная почта"
+              />
+            </label>
+            <label class="feedback-form__label">
+              <textarea
+                class="feedback-form__input"
+                name="message"
+                placeholder="Сообщение"
+              ></textarea>
+            </label>
+            <p class="feedback-form__text"
+              >Нажимая “отправить”, вы даете согласие на
+              <span class="feedback-form__text-accent"
+                >обработку персональных данных</span
+              >
+              и соглашаетесь с нашей
+              <span class="feedback-form__text-accent"
+                >политикой конфиденциальности</span
+              ></p
+            >
+            <button class="feedback-form__btn" type="submit">
+              <p class="feedback-form__btn-text">ОТПРАВИТЬ</p>
+              <img
+                class="feedback-form__btn-img"
+                src="/src/img/dropdown.svg"
+                alt=""
+              />
+            </button>
+          </form>
+        </div>
+      </aside>
+      <aside class="callback">
+        <div class="callback__content">
+          <button class="btn-style callback__btn"
+            ><img class="callback__btn-img" src="/src/img/burger.svg" alt=""
+          /></button>
+          <h2 class="callback__title">Заказать звонок</h2>
+          <form action="" method="post" class="feedback-form">
+            <label class="feedback-form__label">
+              <input
+                class="feedback-form__input"
+                type="tel"
+                name="phone"
+                placeholder="Телефон"
+              />
+            </label>
+            <p class="feedback-form__text"
+              >Нажимая “отправить”, вы даете согласие на
+              <span class="feedback-form__text-accent"
+                >обработку персональных данных</span
+              >
+              и соглашаетесь с нашей
+              <span class="feedback-form__text-accent"
+                >политикой конфиденциальности</span
+              ></p
+            >
+            <button class="feedback-form__btn" type="submit">
+              <p class="feedback-form__btn-text">ОТПРАВИТЬ</p>
+              <img
+                class="feedback-form__btn-img"
+                src="/src/img/dropdown.svg"
+                alt=""
+              />
+            </button>
+          </form>
+        </div>
+      </aside>
       <div class="inner__main">
         <header class="header">
           <div class="container">
@@ -133,13 +229,13 @@
                     type="button"
                   >
                     <img
-                      class="menu-rigth__btn-img"
+                      class="menu-rigth__btn-img js-callback-btn"
                       src="img/call.svg"
                       alt="Обратный звонок"
                     />
                   </button>
                   <button
-                    class="btn-style menu-rigth__contacts-btn"
+                    class="btn-style menu-rigth__contacts-btn js-feedback-btn"
                     type="button"
                   >
                     <img

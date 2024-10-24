@@ -1,6 +1,6 @@
 .header {
   background-color: $white-background;
-
+  min-width: 320px;
   &__inner {
     min-height: 88px;
     display: flex;
@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .menu-left {
     gap: 42px;
     &__logo {
@@ -63,7 +63,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .menu-rigth {
     display: flex;
     &__contacts {

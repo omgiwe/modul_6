@@ -2,7 +2,7 @@
   padding-bottom: 24px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .technics {
     padding-bottom: 32px;
   }
@@ -23,8 +23,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
+    background-color: $white-background;
+    border: 1px solid $gray-element;
     border-radius: 6px;
   }
   &__title {
@@ -48,7 +48,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .technics-item {
     width: 224px;
   }
@@ -60,7 +60,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .slider-technics {
     display: flex;
     width: 100%;
@@ -101,7 +101,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .technics-btn {
     border: none;
     background-color: transparent;

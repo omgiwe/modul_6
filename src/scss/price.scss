@@ -2,7 +2,7 @@
   padding-bottom: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .price {
     padding-bottom: 47px;
   }
@@ -67,7 +67,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .price-item {
     width: auto;
     &__inner {
@@ -114,14 +114,14 @@
 }
 
 ////Нижние рамки
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .swiper-slide:not(:last-child) .price-item .price-item__inner {
     border-bottom: 1px solid $gray-element;
   }
 }
 ////////
 /// Убираем текст кропе первого и поднимаем его
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .swiper-slide:not(:first-child)
     .price-item
     .price-item__inner
@@ -135,7 +135,7 @@
   margin-bottom: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .slider-price {
     padding-top: 47px;
     margin-bottom: 24px;
@@ -178,7 +178,7 @@
   }
 }
 
-@media (min-width: 380px) {
+@media (min-width: $screen-s) {
   .offer {
     &__btn {
       width: auto;

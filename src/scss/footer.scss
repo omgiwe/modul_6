@@ -13,7 +13,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .footer-inner {
     padding: 25px 0;
     flex-direction: row;

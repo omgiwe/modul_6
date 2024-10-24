@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-m) {
   .about {
     &__info {
       display: flex;

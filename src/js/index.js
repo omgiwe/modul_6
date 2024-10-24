@@ -137,6 +137,8 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+////////////Бургер
+
 const BURGER_OPENED_CLASSNAME = 'aside--open'
 const BODY_FIXED_CLASSNAME = 'body_fixed'
 
@@ -164,5 +166,79 @@ function openBurger() {
 
 function closeBurger() {
   burgerNode.classList.remove(BURGER_OPENED_CLASSNAME)
+  bodyNode.classList.remove(BODY_FIXED_CLASSNAME)
+}
+
+///////Модалка обратная связь
+
+const MODAL_FEEDBACK_OPENED_CLASSNAME = 'feedback--open'
+
+const feedbackBtnOpen = document.querySelectorAll('.js-feedback-btn')
+const feedbackNode = document.querySelector('.feedback')
+const feedbackContent = document.querySelector('.feedback__content')
+const feedbackBtnClose = document.querySelector('.feedback__btn')
+
+for (let i = 0; i < feedbackBtnOpen.length; i++) {
+  feedbackBtnOpen[i].addEventListener('click', openFeedback)
+}
+
+feedbackBtnClose.addEventListener('click', closeFeedback)
+
+feedbackNode.addEventListener('click', (event) => {
+  const isClickOutsideContent = !event.composedPath().includes(feedbackContent)
+
+  if (isClickOutsideContent) {
+    closeFeedback()
+  }
+})
+
+function openFeedback() {
+  feedbackNode.classList.add(MODAL_FEEDBACK_OPENED_CLASSNAME)
+  bodyNode.classList.add(BODY_FIXED_CLASSNAME)
+
+  if (burgerNode.classList.contains(BURGER_OPENED_CLASSNAME)) {
+    burgerNode.classList.remove(BURGER_OPENED_CLASSNAME)
+  }
+}
+
+function closeFeedback() {
+  feedbackNode.classList.remove(MODAL_FEEDBACK_OPENED_CLASSNAME)
+  bodyNode.classList.remove(BODY_FIXED_CLASSNAME)
+}
+
+//////Модалка обратный звонок
+
+const MODAL_CALLBACK_OPENED_CLASSNAME = 'callback--open'
+
+const callbackBtnOpen = document.querySelectorAll('.js-callback-btn')
+const callbackNode = document.querySelector('.callback')
+const callbackContent = document.querySelector('.callback__content')
+const callbackBtnClose = document.querySelector('.callback__btn')
+
+for (let i = 0; i < callbackBtnOpen.length; i++) {
+  callbackBtnOpen[i].addEventListener('click', openCallback)
+}
+
+callbackBtnClose.addEventListener('click', closeCallback)
+
+callbackNode.addEventListener('click', (event) => {
+  const isClickOutsideContent = !event.composedPath().includes(callbackContent)
+
+  if (isClickOutsideContent) {
+    closeCallback()
+  }
+})
+
+function openCallback() {
+  callbackNode.classList.add(MODAL_CALLBACK_OPENED_CLASSNAME)
+  bodyNode.classList.add(BODY_FIXED_CLASSNAME)
+
+  if (burgerNode.classList.contains(BURGER_OPENED_CLASSNAME)) {
+    burgerNode.classList.remove(BURGER_OPENED_CLASSNAME)
+  }
+}
+
+function closeCallback() {
+  callbackNode.classList.remove(MODAL_CALLBACK_OPENED_CLASSNAME)
   bodyNode.classList.remove(BODY_FIXED_CLASSNAME)
 }
